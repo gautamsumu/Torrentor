@@ -1,0 +1,122 @@
+javac *.java
+
+java MultiServer
+--- Server
+
+Waiting for first Client...
+Connection Accepted.
+Connected to a client /127.0.1.1
+File required : test.txt in 3 chunks
+Port 18500 opened
+Sending data from 0 to 20 bytes.
+Port 18400 opened
+Sending data from 20 to 38 bytes.
+Port 21240 opened
+Sending data from 38 to 56 bytes.
+Connected to client /127.0.1.1 at port number 18500
+Port : 18500 Transfering 20 bytes
+Transmission completed at port number 18500
+Connected to client /127.0.1.1 at port number 18400
+Port : 18400 Transfering 18 bytes
+Transmission completed at port number 18400
+Connected to client /127.0.1.1 at port number 21240
+Port : 21240 Transfering 18 bytes
+Transmission completed at port number 21240
+
+--- Client
+
+java Client test.txt 3 ubuntu 4444
+
+Client IP: ubuntu/127.0.1.1
+Required file is test.txt in 3 chunks.
+Connection Accepted.
+Sending file... 
+Connecting to port 18500
+Connecting to port 18400
+Connected to port 18400
+Receiving 18 bytes from server port 18400
+Connected to port 18500
+Receiving 20 bytes from server port 18500
+Received 20 bytes from port 18500
+Received 18 bytes from port 18400
+Connecting to port 21240
+Connected to port 21240
+Receiving 18 bytes from server port 21240
+Received 18 bytes from port 21240
+File Received.
+Downloaded in 11 milliseconds.
+Average Download Speed is 5090 bytes/s.
+Give file name : gautam.txt
+
+
+java Client test.txt 3 ubuntu 4444
+Client IP: ubuntu/127.0.1.1
+Required file is test.txt in 3 chunks.
+Connection Accepted.
+Sending file... 
+Connecting to port 12828
+Connecting to port 22304
+Connected to port 12828
+Receiving 20 bytes from server port 12828
+Received 20 bytes from port 12828
+Connected to port 22304
+Receiving 18 bytes from server port 22304
+Received 18 bytes from port 22304
+Connecting to port 11041
+Connected to port 11041
+Receiving 18 bytes from server port 11041
+Received 18 bytes from port 11041
+File Received.
+Downloaded in 7 milliseconds.
+Average Download Speed is 8000 bytes/s.
+Give file name : a.txt
+
+
+---  Server
+
+Waiting for first Client...
+Connection Accepted.
+Connected to a client /127.0.1.1
+File required : test.txt in 3 chunks
+Port 27357 opened
+Sending data from 0 to 20 bytes.
+Port 18040 opened
+Sending data from 20 to 38 bytes.
+Port 11696 opened
+Sending data from 38 to 56 bytes.
+Connected to client /127.0.1.1 at port number 27357
+Connected to client /127.0.1.1 at port number 11696
+Port : 27357 Transfering 20 bytes
+Transmission completed at port number 27357
+Port : 11696 Transfering 18 bytes
+Transmission completed at port number 11696
+Connected to client /127.0.1.1 at port number 18040
+Port : 18040 Transfering 18 bytes
+Transmission completed at port number 18040
+
+
+--- Client
+
+java Client test.txt 3 ubuntu 4444
+
+Client IP: ubuntu/127.0.1.1
+Required file is test.txt in 3 chunks.
+Connection Accepted.
+Sending file... 
+Connecting to port 27357
+Connecting to port 11696
+Connected to port 27357
+Receiving 20 bytes from server port 27357
+Received 20 bytes from port 27357
+Connected to port 11696
+Receiving 18 bytes from server port 11696
+Received 18 bytes from port 11696
+Connecting to port 18040
+Connected to port 18040
+Receiving 18 bytes from server port 18040
+Received 18 bytes from port 18040
+File Received.
+Downloaded in 13 milliseconds.
+Average Download Speed is 4307 bytes/s.
+Give file name : hi.txt
+
